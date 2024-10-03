@@ -27,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Simulation</title>
     <style>
-        /* Style for the container */
+     
         .typing-container {
             font-family: Arial, sans-serif;
             font-size: 24px;
@@ -37,12 +37,12 @@
             border-right: 4px solid;
             width: fit-content;
         }
-        /* Animation for the typing effect */
+      
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
         }
-        /* Blinking cursor */
+      
         @keyframes blink {
             0%, 50% { border-color: transparent; }
             50%, 100% { border-color: black; }
@@ -53,14 +53,14 @@
     <div class="typing-container" id="typing-text"></div>
 
     <script>
-        // Function to simulate typing effect
+      
         function typeText(element, text, speed) {
             let index = 0;
             function type() {
                 if (index < text.length) {
                     element.textContent += text.charAt(index);
                     index++;
-                    setTimeout(type, speed); // Recursively call type() for typing effect
+                    setTimeout(type, speed); 
                 }
             }
             type();
@@ -70,12 +70,12 @@
         window.onload = () => {
             const typingContainer = document.getElementById("typing-text");
             const text = "CLICK HIM";
-            typeText(typingContainer, text, 100); // Set speed (in milliseconds)
+            typeText(typingContainer, text, 100); /
         };
     </script>
 </center>
 
-
+// this is chatgptd (the javascript)
 
 </body>
 
