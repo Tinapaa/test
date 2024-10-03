@@ -23,7 +23,56 @@
 <h1 style="background-color:rgba(146, 255, 209, 0.384) ;"><a href="https://game.granbluefantasy.jp/"> <img src ="Siete.png"></src></a></h1>
 <h1 style="background-color:rgb(99, 255, 208);">^</h1>
 
-<h1 style="background-color:rgb(134, 211, 255);">CLICK HIM</h1>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Simulation</title>
+    <style>
+        /* Style for the container */
+        .typing-container {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid;
+            width: fit-content;
+        }
+        /* Animation for the typing effect */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        /* Blinking cursor */
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            50%, 100% { border-color: black; }
+        }
+    </style>
+</head>
+<body>
+    <div class="typing-container" id="typing-text"></div>
+
+    <script>
+        // Function to simulate typing effect
+        function typeText(element, text, speed) {
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed); // Recursively call type() for typing effect
+                }
+            }
+            type();
+        }
+
+        // Start the typing animation on page load
+        window.onload = () => {
+            const typingContainer = document.getElementById("typing-text");
+            const text = "CLICK HIM";
+            typeText(typingContainer, text, 100); // Set speed (in milliseconds)
+        };
+    </script>
 </center>
 
 
